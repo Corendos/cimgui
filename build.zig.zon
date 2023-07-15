@@ -3,8 +3,8 @@
     .version = "1.89.7",
     .dependencies = .{
         .imgui = .{
-            .url = "https://github.com/Corendos/imgui/archive/0876483e39145fef7d7206bf73f46839a72d51f1.tar.gz",
-            .hash = "1220b352b5b1284d8fef53f0dcba5bc4c07eb2348ad066ba94c99ecc7c62f17dee85",
+            .url = "https://github.com/Corendos/imgui/archive/9ac5d600c392f3b92ecec141b84cb585e937130e.tar.gz",
+            .hash = "122038d9878800968fae2dce25f4ee29030e8e0f2e41d10c40eae85d7d7acb5547d6",
         },
     },
 }

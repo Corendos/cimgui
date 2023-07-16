@@ -86,6 +86,17 @@ pub fn build(b: *std.Build) !void {
     cimgui.installHeader("cimgui.h", "cimgui/cimgui.h");
 
     b.installArtifact(cimgui);
+
+    const generate_step = b.step("generate", "Generate bindings artifacts");
+
+    const run_generator = std.Build.Step.Run.create(b, "run_generator");
+    run_generator.setEnvironmentVariable("IMGUI_PATH", imgui_dep.builder.build_root.path.?);
+    run_generator.cwd = "generator";
+    _ = run_generator.captureStdErr();
+    _ = run_generator.captureStdOut();
+    run_generator.addArgs(&.{"./generator.sh"});
+
+    generate_step.dependOn(&run_generator.step);
 }
 
 inline fn thisDir() []const u8 {

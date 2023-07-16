@@ -23,7 +23,7 @@
 POSITIONAL_ARGS=()
 
 TARGETS="internal noimstrv"
-CFLAGS="glfw opengl3 opengl2 sdl2"
+CFLAGS="glfw opengl3 opengl2 sdl2 allegro5 android dx9 dx10 dx11 dx12 glut metal osx sdl3 sdlrenderer2 sdlrenderer3 vulkan wgpu win32"
 
 help() {
         cat <<EOF
